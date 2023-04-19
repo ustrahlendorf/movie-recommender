@@ -1,5 +1,5 @@
 # 1. Base image
-FROM python:3.8.3-slim-buster
+FROM python:3.10.11-slim-bullseye
 
 # 2. Copy files
 COPY . /src
