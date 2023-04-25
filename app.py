@@ -20,5 +20,5 @@ class Movie:
 cherrypy.quickstart(
     Movie(), config=cherrypy.config.update({
         'server.socket_host': '0.0.0.0',
-        'server.socket_port': PORT,
+        'server.socket_port': 8888,
         }))
