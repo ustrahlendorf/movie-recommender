@@ -4,7 +4,7 @@ from pathlib import Path
 from random import choice
 import cherrypy
 
-PORT = os.environ.get('PORT', 8888)
+PORT = int(os.environ.get('PORT', 8888))
 
 FOLDER_PATH = Path(__file__).parent
 
@@ -20,5 +20,5 @@ class Movie:
 cherrypy.quickstart(
     Movie(), config=cherrypy.config.update({
         'server.socket_host': '0.0.0.0',
-        'server.socket_port': 8888,
+        'server.socket_port': PORT,
         }))
